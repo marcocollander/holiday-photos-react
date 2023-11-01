@@ -1,12 +1,10 @@
 const Header = () => {
-
-  console.log('Renderujemy kompopnent Header');
   
   return (
     <>
-      <header class='header' id='start'>
-        <div class='hero-bg'></div>
-        <div class='hero-text'>
+      <header className='header' id='start'>
+        <div className='hero-bg'></div>
+        <div className='hero-text'>
           <h1>
             zdjęcia z<span> wczasów</span>
           </h1>

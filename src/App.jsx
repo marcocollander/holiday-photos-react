@@ -1,16 +1,14 @@
-import Navigation  from './components/Navigation/Navigation';
+import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
 
-
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-      <Navigation/>
-      {/* <Header/> */}
-
-      
-    </div>
+    <>
+      <Navigation />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
 
