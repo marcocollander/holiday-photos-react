@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer>
-      <p>Copyright &copy; FreeCoder 2021 All rights reserved</p>
+    <footer className="footer">
+      <p className="footer__description">Copyright &copy; FreeCoder 2021 All rights reserved</p>
     </footer>
   );
 };

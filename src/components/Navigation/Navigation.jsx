@@ -9,12 +9,12 @@ import {useState } from 'react';
 const Navigation = () => {
  
   const [active, setActive] = useState('');
-  const handleClick = () => (!active ? setActive('active') : setActive(''));
+  const handleClick = () => (!active ? setActive('show') : setActive(''));
   
   return (
     <>
       <nav className='nav'>
-        <Button onClick={handleClick} active />
+        <Button onClick={handleClick} />
         <div className={`links ${active}`}>
           <NavLink to='/'>Start</NavLink>
           <NavLink to='/aboutme'>AboutMe</NavLink>

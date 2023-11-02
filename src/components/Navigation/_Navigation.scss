@@ -1,8 +1,49 @@
+@use '../../sass/var';
+
+.nav {
+  // width: 100vw;
+}
+
 .links {
   display: none;
   flex-direction: column;
+  transition: all 0.8s;
+  text-align: center;
+
+  a {
+    color: var.$color-light;
+  }
 }
 
-.active {
+.show {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 50vh;
   display: flex;
+  justify-content: space-evenly;
+  animation: show 0.3s linear forwards;
+  background-color: yellow;
+
+  a {
+    color: var.$bgcolor-dark;
+  }
+
+  button {
+    i {
+      color: var.$bgcolor-dark;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    transform: translateX(-100px);
+  }
+
+  to {
+    transform: translateX(50px);
+  }
 }

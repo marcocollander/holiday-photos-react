@@ -10,9 +10,11 @@
 
 :root {
   font-size: 62.5%;
+  
 }
 
 body {
+  width: 100vw;
   background-color: var.$bgcolor-dark;
   color: var.$color-light;
   font-family: var.$font-verdana;
