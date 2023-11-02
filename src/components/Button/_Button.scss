@@ -10,9 +10,10 @@
   border: none;
   transition: all 0.8s;
   z-index: 1;
+  font-size: 3rem;
+  color: var.$color-light;
 
-  &__icon {
-    font-size: 3rem;
-    color: var.$color-light;
+  .fa-times {
+    color: var.$bgcolor-dark;
   }
 }

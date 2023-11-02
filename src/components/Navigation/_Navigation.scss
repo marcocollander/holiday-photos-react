@@ -5,7 +5,6 @@
 }
 
 .links {
-  display: none;
   flex-direction: column;
   transition: all 0.8s;
   text-align: center;
@@ -30,11 +29,31 @@
   a {
     color: var.$bgcolor-dark;
   }
+}
 
-  button {
-    i {
-      color: var.$bgcolor-dark;
-    }
+.hidden {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -200px;
+  height: 50vh;
+  animation: hidden 0.3s linear forwards;
+  flex-direction: column;
+  transition: all 0.8s;
+  text-align: center;
+
+  a {
+    color: var.$color-light;
+  }
+}
+
+@keyframes hidden {
+  from {
+    transform: translateX(50px);
+  }
+
+  to {
+    transform: translateX(-100px);
   }
 }
 
@@ -44,6 +63,6 @@
   }
 
   to {
-    transform: translateX(50px);
+    transform: translateX(0);
   }
 }

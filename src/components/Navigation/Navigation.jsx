@@ -4,23 +4,39 @@ import Header from '../Header/Header';
 import AboutMe from '../../pages/AboutMe';
 import Gallery from '../../pages/Gallery';
 import Contact from '../../pages/Contact';
-import {useState } from 'react';
+import { useState } from 'react';
 
 const Navigation = () => {
- 
   const [active, setActive] = useState('');
-  const handleClick = () => (!active ? setActive('show') : setActive(''));
-  
+  const [hidden, setHidden] = useState('hidden');
+  const [burgerIcon, setBurgerIcon] = useState('fas fa-bars');
+  const handleClick = () => {
+    !active ? setActive('show') : setActive('');
+    hidden ? setHidden('') : setHidden('hidden');
+    burgerIcon ? setBurgerIcon('') : setBurgerIcon('fas fa-bars');
+  };
+
   return (
     <>
       <nav className='nav'>
-        <Button onClick={handleClick} />
-        <div className={`links ${active}`}>
-          <NavLink to='/'>Start</NavLink>
-          <NavLink to='/aboutme'>AboutMe</NavLink>
-          <NavLink to='/gallery'>Galeria</NavLink>
-          <NavLink to='/contact'>Kontakt</NavLink>
-        </div>
+        <Button classNameIcon={burgerIcon}
+          onClick={handleClick}
+        />
+        <ul className={`links ${active} ${hidden}`}>
+          <li onClick={handleClick}>
+            <NavLink to='/'>Start</NavLink>
+          </li>
+          <li onClick={handleClick}>
+            <NavLink to='/aboutme'>AboutMe</NavLink>
+          </li>
+          <li>
+            <NavLink to='/gallery'>Galeria</NavLink>
+          </li>
+
+          <li>
+            <NavLink to='/contact'>Kontakt</NavLink>
+          </li>
+        </ul>
       </nav>
       <Routes>
         <Route path='/' element={<Header />} />
@@ -31,5 +47,6 @@ const Navigation = () => {
     </>
   );
 };
+<li></li>;
 
 export default Navigation;
