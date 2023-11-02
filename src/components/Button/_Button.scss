@@ -8,10 +8,10 @@
   height: 40px;
   background: none;
   border: none;
-  transition: all 0.8s;
   z-index: 1;
   font-size: 3rem;
   color: var.$color-light;
+  cursor: pointer;
 
   .fa-times {
     color: var.$bgcolor-dark;

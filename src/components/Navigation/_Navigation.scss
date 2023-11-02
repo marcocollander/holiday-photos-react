@@ -1,68 +1,68 @@
 @use '../../sass/var';
 
-.nav {
-  // width: 100vw;
-}
-
 .links {
-  flex-direction: column;
-  transition: all 0.8s;
-  text-align: center;
+	flex-direction: column;
+	transition: all 0.8s;
+	text-align: center;
+	font-size: 2rem;
 
-  a {
-    color: var.$color-light;
-  }
+	a {
+		color: var.$color-light;
+	}
 }
 
 .show {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 
-  height: 50vh;
-  display: flex;
-  justify-content: space-evenly;
-  animation: show 0.3s linear forwards;
-  background-color: yellow;
+	height: 50vh;
+	display: flex;
+	justify-content: space-evenly;
+	animation: show 0.1s linear forwards;
+	background-color: rgb(239, 239, 213);
 
-  a {
-    color: var.$bgcolor-dark;
-  }
+	a {
+		color: var.$bgcolor-dark;
+	}
 }
 
 .hidden {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: -200px;
-  height: 50vh;
-  animation: hidden 0.3s linear forwards;
-  flex-direction: column;
-  transition: all 0.8s;
-  text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: -250px;
+	height: 50vh;
+	animation: hidden 0.1s linear forwards;
+	flex-direction: column;
+	text-align: center;
 
-  a {
-    color: var.$color-light;
-  }
+	a {
+		color: var.$color-light;
+	}
 }
 
 @keyframes hidden {
-  from {
-    transform: translateX(50px);
-  }
+	from {
+		transform: translateX(50px);
+	}
 
-  to {
-    transform: translateX(-100px);
-  }
+	to {
+		transform: translateX(-100px);
+	}
 }
 
 @keyframes show {
-  from {
-    transform: translateX(-100px);
-  }
+	from {
+		transform: translateX(-100px);
+	}
 
-  to {
-    transform: translateX(0);
-  }
+	to {
+		transform: translateX(0);
+	}
+}
+
+@media (min-width: 576px) {
+  
 }

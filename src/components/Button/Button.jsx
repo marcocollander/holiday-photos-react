@@ -1,10 +1,11 @@
-const Button = ({onClick, classNameIcon = 'fas fa-times'}) => {
-  
-  return (
-    <button onClick={onClick} className="burger">
-      <i className={classNameIcon}></i>
-    </button>
-  );
+const Button = ({ onClick, classIcon }) => {
+	return (
+		<button
+			onClick={onClick}
+			className='burger'>
+			<i className={classIcon}></i>
+		</button>
+	);
 };
 
 export default Button;

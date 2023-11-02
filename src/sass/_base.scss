@@ -3,19 +3,24 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  font-size: 62.5%;
-  
+	font-size: 62.5%;
 }
 
 body {
-  width: 100vw;
-  background-color: var.$bgcolor-dark;
-  color: var.$color-light;
-  font-family: var.$font-verdana;
+	width: 100vw;
+	background-color: var.$bgcolor-dark;
+	color: var.$color-light;
+	font-family: var.$font-verdana;
+}
+
+.section-title {
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 1px;
 }

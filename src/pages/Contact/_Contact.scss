@@ -1,0 +1,34 @@
+@use '../../sass/var';
+
+.contact {
+	margin-top: 35%;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5rem;
+	font-weight: normal;
+	z-index: 1;
+	color: var.$dark;
+	text-shadow: 1px 2px 3px var.$color-light;
+
+	img {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: 25%;
+		z-index: -1;
+	}
+
+	&__description {
+		letter-spacing: 1px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		justify-content: center;
+	}
+}
