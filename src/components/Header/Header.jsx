@@ -1,16 +1,28 @@
+import hero from '../../images/heros.jpg';
+
 const Header = () => {
-  
-  return (
-    <>
-      <header className='header' id='start'>
-          <h1>
-            zdjęcia z<span> wczasów</span>
-          </h1>
-          <p>Bardzo miłe fotki z wczasów krajowych,<br/><br/> jak i z zagranicznych</p>
-      
-      </header>
-    </>
-  );
+	return (
+		<div className='contianer'>
+			<section className='hero'>
+				<img
+					className='hero__image'
+					src={hero}
+					alt=''
+				/>
+				<header
+					className='hero__header'
+					id='start'>
+					<h1 className='hero__heading'>
+						zdjęcia z<span> wczasów</span>
+					</h1>
+					<p className='hero__description'>
+						Bardzo miłe fotki z wczasów krajowych,
+						<span className='hero__span'>jak i z zagranicznych</span>
+					</p>
+				</header>
+			</section>
+		</div>
+	);
 };
 
 export default Header;

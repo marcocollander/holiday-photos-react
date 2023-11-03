@@ -1,61 +1,40 @@
 @use '../../sass/var';
 
 .links {
+	position: absolute;
+	top: 0;
+	left: -200px;
+	width: 200px;
+	height: 20vh;
+	display: flex;
 	flex-direction: column;
-	transition: all 0.8s;
-	text-align: center;
-	font-size: 2rem;
+	justify-content: space-evenly;
+	border-radius: 50px;
+	align-items: center;
+	background-color: rgb(239, 239, 213);
+	list-style: none;
+	font-size: 1.8rem;
+	z-index: 1;
 
-	a {
-		color: var.$color-light;
+	&__item {
+		text-decoration: none;
 	}
 }
 
+.hidden {
+	animation: hidden 0.3s linear forwards;
+}
+
 .show {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	height: 50vh;
-	display: flex;
-	justify-content: space-evenly;
-	animation: show 0.1s linear forwards;
-	background-color: rgb(239, 239, 213);
-
+	animation: show 0.3s linear forwards;
 	a {
 		color: var.$bgcolor-dark;
 	}
 }
 
-.hidden {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: -250px;
-	height: 50vh;
-	animation: hidden 0.1s linear forwards;
-	flex-direction: column;
-	text-align: center;
-
-	a {
-		color: var.$color-light;
-	}
-}
-
 @keyframes hidden {
 	from {
-		transform: translateX(50px);
-	}
-
-	to {
-		transform: translateX(-100px);
-	}
-}
-
-@keyframes show {
-	from {
-		transform: translateX(-100px);
+		transform: translateX(210px);
 	}
 
 	to {
@@ -63,6 +42,15 @@
 	}
 }
 
+@keyframes show {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(210px);
+	}
+}
+
 @media (min-width: 576px) {
-  
 }

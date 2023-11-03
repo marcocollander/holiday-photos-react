@@ -7,19 +7,19 @@ import Contact from '../../pages/Contact/Contact';
 import { useState } from 'react';
 
 const Navigation = () => {
-	const [active, setActive] = useState('');
+	const [show, setShow] = useState('');
 	const [hidden, setHidden] = useState('hidden');
-	const [classIcon, setClassIcon] = useState('fas fa-bars');
+	const [classIcon, setClassIcon] = useState('fa-solid fa-bars');
 	const [flag, setFlag] = useState(true);
 
-	const handleClick = e => {
-		!active ? setActive('show') : setActive('');
+	const handleClick = () => {
 		hidden ? setHidden('') : setHidden('hidden');
-		flag ? setClassIcon('fas fa-times') : setClassIcon('fas fa-bars');
-    flag ? setFlag(false) : setFlag('true')
+		!show ? setShow('show') : setShow('');
+		flag ? setClassIcon('fa-solid fa-xmark') : setClassIcon('fa-solid fa-bars');
+		flag ? setFlag(false) : setFlag('true');
 	};
 
-	return  (console.log(flag),
+	return (
 		<>
 			<nav className='nav'>
 				<Button
@@ -27,19 +27,35 @@ const Navigation = () => {
 					classIcon={classIcon}
 				/>
 
-				<ul className={`links ${active} ${hidden}`}>
+				<ul className={`links ${show} ${hidden}`}>
 					<li onClick={handleClick}>
-						<NavLink to='/'>Start</NavLink>
+						<NavLink
+							className='links__item'
+							to='/'>
+							Start
+						</NavLink>
 					</li>
 					<li onClick={handleClick}>
-						<NavLink to='/aboutme'>AboutMe</NavLink>
+						<NavLink
+							className='links__item'
+							to='/aboutme'>
+							AboutMe
+						</NavLink>
 					</li>
 					<li onClick={handleClick}>
-						<NavLink to='/gallery'>Galeria</NavLink>
+						<NavLink
+							className='links__item'
+							to='/gallery'>
+							Galeria
+						</NavLink>
 					</li>
 
 					<li onClick={handleClick}>
-						<NavLink to='/contact'>Kontakt</NavLink>
+						<NavLink
+							className='links__item'
+							to='/contact'>
+							Kontakt
+						</NavLink>
 					</li>
 				</ul>
 			</nav>
