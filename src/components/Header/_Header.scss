@@ -1,37 +1,10 @@
-@use '../../sass/var';
-@use '../../sass/mixins';
-
-.hero {
-	position: relative;
-	text-align: center;
-
-	&__header {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: var.$color-dark;
-	}
-
-	&__image {
-		width: 100%;
-	}
-
+.header {
 	&__heading {
-		@include mixins.flex-column();
-		font-size: 3rem;
+		padding: 20px;
+		text-align: center;
+		text-transform: uppercase;
 		font-weight: normal;
-		text-shadow: 1px 1px 1px white;
-
-		span {
-			text-transform: uppercase;
-		}
-	}
-
-	&__description {
-		margin-top: 40px;
+		letter-spacing: 2px;
 		font-size: 1.8rem;
-		@include mixins.flex-column();
-		text-shadow: 1px 1px 1px white;
 	}
 }

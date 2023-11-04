@@ -1,10 +1,7 @@
-import { NavLink, Routes, Route } from 'react-router-dom';
 import Button from '../../components/Button/Button';
-import Header from '../Header/Header';
-import AboutMe from '../../pages/AboutMe';
-import Gallery from '../../pages/Gallery';
-import Contact from '../../pages/Contact/Contact';
+import LinkApp from '../../components/LinkApp/LinkApp';
 import { useState } from 'react';
+import RoutesApp from '../../Routes/RoutesApp';
 
 const Navigation = () => {
 	const [show, setShow] = useState('');
@@ -19,6 +16,9 @@ const Navigation = () => {
 		flag ? setFlag(false) : setFlag('true');
 	};
 
+	const urls = ['/', '/aboutme', '/gallery', '/contact'];
+	const names = ['Start', 'O mnie', 'Galeria', 'Kontakt'];
+
 	return (
 		<>
 			<nav className='nav'>
@@ -28,58 +28,15 @@ const Navigation = () => {
 				/>
 
 				<ul className={`links ${show} ${hidden}`}>
-					<li onClick={handleClick}>
-						<NavLink
-							className='links__item'
-							to='/'>
-							Start
-						</NavLink>
-					</li>
-					<li onClick={handleClick}>
-						<NavLink
-							className='links__item'
-							to='/aboutme'>
-							AboutMe
-						</NavLink>
-					</li>
-					<li onClick={handleClick}>
-						<NavLink
-							className='links__item'
-							to='/gallery'>
-							Galeria
-						</NavLink>
-					</li>
-
-					<li onClick={handleClick}>
-						<NavLink
-							className='links__item'
-							to='/contact'>
-							Kontakt
-						</NavLink>
-					</li>
+					{names.map((item, index) => (
+						<LinkApp key={index} onClick={handleClick} name={item} url={urls[index]}/>
+					))}
+					
 				</ul>
 			</nav>
-			<Routes>
-				<Route
-					path='/'
-					element={<Header />}
-				/>
-				<Route
-					path='/aboutme'
-					element={<AboutMe />}
-				/>
-				<Route
-					path='/gallery'
-					element={<Gallery />}
-				/>
-				<Route
-					path='/contact'
-					element={<Contact />}
-				/>
-			</Routes>
+			<RoutesApp />
 		</>
 	);
 };
-<li></li>;
 
 export default Navigation;
