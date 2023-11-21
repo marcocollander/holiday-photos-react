@@ -1,10 +1,11 @@
 .header {
+	width: 100vw;
 	&__heading {
-		padding: 20px;
+		padding: 10px;
 		text-align: center;
 		text-transform: uppercase;
 		font-weight: normal;
 		letter-spacing: 2px;
-		font-size: 1.8rem;
+		font-size: 1.4rem;
 	}
 }

@@ -2,54 +2,32 @@
 
 .links {
 	position: absolute;
-	top: 0;
-	left: -200px;
-	width: 200px;
+	top: 35px;
+	right: 0;
+	width: 100px;
 	height: 20vh;
-	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	border-radius: 50px;
+	border-radius: 10px;
 	align-items: center;
-	background-color: rgb(239, 239, 213);
+	background-color: rgba(239, 239, 213, 0.3);
 	list-style: none;
 	font-size: 1.8rem;
 	z-index: 1;
 
 	&__item {
 		text-decoration: none;
+		color: var.$color-dark;
+		font-size: 1.4rem;
 	}
 }
 
 .hidden {
-	animation: hidden 0.3s linear forwards;
+	display: none;
 }
 
 .show {
-	animation: show 0.3s linear forwards;
-	a {
-		color: var.$bgcolor-dark;
-	}
-}
-
-@keyframes hidden {
-	from {
-		transform: translateX(210px);
-	}
-
-	to {
-		transform: translateX(0);
-	}
-}
-
-@keyframes show {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(210px);
-	}
+	display: flex;
 }
 
 @media (min-width: 576px) {
