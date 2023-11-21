@@ -1,7 +1,7 @@
 const Header = () => {
 	return (
 		<header className='header'>
-			<h1 className='header__heading'>Tam gdzie byliśmy</h1>
+			<h1 className='header__heading'>Nasze urlopy</h1>
 		</header>
 	);
 };
