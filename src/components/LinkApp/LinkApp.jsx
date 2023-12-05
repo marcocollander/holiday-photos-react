@@ -12,4 +12,4 @@ const LinkApp = ({url, name, ...props}) => {
   )
 }
 
-export default LinkApp
+export default LinkApp    

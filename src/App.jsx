@@ -1,17 +1,16 @@
-import Header from './components/Header/Header';
+import { BrowserRouter } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
-import Footer from './components/Footer/Footer';
-
+import Header from './components/Header/Header';
+import RoutesApp from './Routes/RoutesApp';
 
 const App = () => {
   return (
-    <>
-      <Header/>
+    <BrowserRouter>
+      <Header />
       <Navigation />
-      <Footer />
-    </>
+      <RoutesApp />
+    </BrowserRouter>
   );
 };
 
 export default App;
-
