@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hamburger-item {
+  height: 3px;
+}
+
+p.rotate {
+  animation: rotate ease-in-out 0.3s forwards;
+}
+
+p.none {
+  display: none;
+}
+
+p.rotate-reverse {
+  animation: rotate-reverse ease-in-out 0.3s forwards;
+}
+
+nav.active {
+  animation: active ease-in-out 0.3s forwards;
+}
+
+nav.no-active {
+  animation: no-active ease-in-out 0.3s forwards;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0) translateY(0);
+  }
+
+  to {
+    transform: rotate(45deg) translateY(8px);
+  }
+}
+
+@keyframes rotate-reverse {
+  from {
+    transform: rotate(0) translateY(0);
+  }
+
+  to {
+    transform: rotate(-45deg) translateY(-9px);
+  }
+}
+
+@keyframes active {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 18vh;
+  }
+}
+
+@keyframes no-active {
+  from {
+    height: 18vh;
+  }
+
+  to {
+    height: 0;
+    display: none;
+  }
+}
+

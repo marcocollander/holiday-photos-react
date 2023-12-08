@@ -1,14 +1,13 @@
 import { BrowserRouter } from 'react-router-dom';
-import Navigation from './components/Navigation/Navigation';
-import Header from './components/Header/Header';
-import RoutesApp from './Routes/RoutesApp';
+import RoutesApp from './routes/RoutesApp';
+import Layout from './components/shared/Layout';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <Navigation />
-      <RoutesApp />
+      <Layout>
+        <RoutesApp />
+      </Layout>
     </BrowserRouter>
   );
 };
