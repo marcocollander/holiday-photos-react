@@ -1,6 +1,7 @@
 import img01 from '../images/tunisia/tunisia-01.png';
 import img02 from '../images/tunisia/tunisia-02.png';
 import img03 from '../images/tunisia/tunisia-03.png';
+import img04 from '../images/tunisia/tunesia-04.png';
 
 const Section = () => {
   const bgImage01 = {
@@ -31,7 +32,7 @@ const Section = () => {
       ></article>
       <article
         className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
+        style={bgImage04}
       ></article>
       <article
         className='h-[75vh] bg-cover bg-center'
