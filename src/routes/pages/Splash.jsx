@@ -1,7 +1,16 @@
+import imgUrl from '../../images/splash/heros.jpg';
+
 const Splash = () => {
+  const styleSection = {
+    backgroundImage: `url(${imgUrl})`,
+  };
+
   return (
     <>
-      <section className='h-[95vh] bg-[url("../../images/splash/hero-mobile.png")]  bg-center bg-cover'></section>
+      <section
+        className='w-screen h-screen bg-cover bg-center'
+        style={styleSection}
+      ></section>
     </>
   );
 };
