@@ -1,59 +1,24 @@
-import img01 from '../images/tunisia/tunisia-01.png';
-import img02 from '../images/tunisia/tunisia-02.png';
-import img03 from '../images/tunisia/tunisia-03.png';
-import img04 from '../images/tunisia/tunesia-04.png';
+import { galleryData } from '../galleryData';
 
-const Section = () => {
-  const bgImage01 = {
-    backgroundImage: `url(${img01}`,
-  };
-  const bgImage02 = {
-    backgroundImage: `url(${img02}`,
-  };
-  const bgImage03 = {
-    backgroundImage: `url(${img03}`,
-  };
-  const bgImage04 = {
-    backgroundImage: `url(${img04}`,
-  };
+const Section = ({ galleryId }) => {
+
+  let images = galleryData.find(item => item.id === galleryId)
+
+  if (images.bgImages === undefined) {
+    return (
+      <h2>Brak zdjęć</h2>
+    )
+  }
+
   return (
     <section>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage02}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage03}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage04}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
-      ></article>
-      <article
-        className='h-[75vh] bg-cover bg-center'
-        style={bgImage01}
-      ></article>
+      {
+        images.bgImages.map((item, index) => {
+        return (
+          <article key={index} className="h-[45vh] bg-cover bg-center" style={item}></article>
+        );
+      })}
+
     </section>
   );
 };

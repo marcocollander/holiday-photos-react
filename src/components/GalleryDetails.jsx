@@ -1,7 +1,7 @@
 import Section from './Section';
 
 const GalleryDetails = ({ galleryId }) => {
-  return galleryId === 'gallery01' && <Section />;
+  return <Section galleryId={galleryId} />;
 };
 
 export default GalleryDetails;
